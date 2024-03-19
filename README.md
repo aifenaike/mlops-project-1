@@ -1,29 +1,24 @@
 <a name="readme-top"></a>
 
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/alexander-ifenaike/]
 
 
-
-
-# Reservation Cancellation Forecasting: a Senior Machine Learning Engineer assignment
+# MLOps Pipelines: Architecting solutions to forecasting reservation cancellation tendencies in hotels
 
 ![Pipelines](images/ml_pipelines.png)
 
-In this repository, you'll find a project I handled during a Machine Learning assignment for a leader in the short-term rental industry. 
+In this repository, I describe a project that illustrates a data processing and machine learning (ML) workflow incorporating **Apache Airflow** and **MLflow** for a fully customizable and ready for a production environment.
 
-The objective of this assignment was clear: 
-* Build a Machine Learning model to predict whether a reservation is likely to be cancelled,
-* Develop an MLOps architecture designed for a production environment.
-
-To accomplish this task, **Airflow** and **Mlflow** are used to build Machine Learning Pipelines, fully customizable and ready for a production environment.
-
-This Github repo comes with a complete article published in the [Towards Data Science](https://towardsdatascience.com/) journal on Medium:
-
-## Article link
-
-[Build Machine Learning Pipelines with Airflow and Mlflow: Reservation Cancellation Forecasting.](https://medium.com/towards-data-science/build-machine-learning-pipelines-with-airflow-and-mlflow-reservation-cancellation-forecasting-da675d409842)
+Here's a brief explanation of the steps involved: 
+* **Raw Data:** The starting point is raw data, which may come from various sources.
+* **Batch:** There is also a batch data source which might be processed periodically.
+* **Preprocessing:** Raw data is first preprocessed to clean and normalize it, making it suitable for ML algorithms. This may include handling missing values, normalizing ranges, etc.
+* **Feature Engineering:** The preprocessed data undergoes feature engineering where new features are created or existing ones are transformed to improve the ML model's performance.
+* **Training:** The processed data is then fed into the training phase where an ML model is taught using historical data.
+* **Validation:** After the model has been trained, it goes through validation to evaluate its performance, usually against a separate dataset not seen by the model during training.
+* **Model Registry:** Successfully validated models are stored in a model registry, which acts as a repository for trained models.
+* **Inference Pipeline:** For new data (which can also come in batches), an inference pipeline is used where the model applies what it has learned to make predictions.
+* **Predictions:** The end result is predictions based on the input data through the model.
 
 ## Code organization
 
@@ -74,7 +69,7 @@ The repository is structured as follows:
 
 The code runs with Airflow and Mlflow. 
 
-To launch these applications, open a terminal for each and type their respective command lines after having installed them. The complete procedure can be found in the [article](https://medium.com/towards-data-science/build-machine-learning-pipelines-with-airflow-and-mlflow-reservation-cancellation-forecasting-da675d409842).
+To launch these applications, open a terminal for each and type their respective command lines after having installed them. 
 
 ```sh
 # Terminal 1
@@ -87,27 +82,3 @@ airflow standalone
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-[linkedin-url]: https://www.linkedin.com/in/jeremy-arancio/
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[stars-shield]: https://img.shields.io/github/stars/jeremyarancio/reservation_cancellation_prediction.svg?style=for-the-badge
-[stars-url]: https://github.com/jeremyarancio/reservation_cancellation_prediction/stargazers
-[forks-shield]: https://img.shields.io/github/forks/jeremyarancio/reservation_cancellation_prediction.svg?style=for-the-badge
-[forks-url]: https://github.com/jeremyarancio/reservation_cancellation_prediction/network/members
