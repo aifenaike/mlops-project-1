@@ -1,7 +1,5 @@
 <a name="readme-top"></a>
 
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/alexander-ifenaike/]
-
 
 # MLOps Pipelines: Architecting solutions to forecasting reservation cancellation tendencies in hotels
 
